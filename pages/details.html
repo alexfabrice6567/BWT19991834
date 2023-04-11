@@ -2,8 +2,9 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../styles/detailsCss.css" />
     <title>19991834 Assignment 1</title>
+    <link rel="stylesheet" href="../styles/detailsCss.css" />
+    <script src="../javascript/details.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -64,9 +65,14 @@
         <div class="shrink-0 snap-start h-screen">
             <section id="interests">
                 <h1 class="interestTitle text-center text-3xl py-4">Interests</h1>
-                <video class="myPc" controls autoplay loop>
-                    <source src="../images/pc-higlights.mov">
-                </video>
+                <div class="video-wrapper">
+                    <video id="myPc" autoplay muted onended='showOverlayItem()'>
+                        <source src="../images/pc-higlights.mp4">
+                    </video>
+                    <div class="foreground-item" id="foreground-item">
+                        <h1>ggt</h1>
+                    </div>
+                </div>
             </section>
         </div>
     </div>
