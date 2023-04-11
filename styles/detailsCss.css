@@ -5,12 +5,9 @@ body {
     background-color: rgb(214, 214, 214);
 }
 
-body {
-    overflow: hidden;
-}
-
 .header {
     background-color: rgb(224, 224, 224);
+    z-index: 1;
 }
 
 .header a {
@@ -20,9 +17,35 @@ body {
 
 .main-content {
     background-color: #e7e7e7;
-    overflow-y: scroll !important;
 }
 
-.scroll-items {
-    overflow-y: scroll !important;
+.half-screen {
+    height: 50% !important;
+}
+
+.myPc {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+@keyframes cycle {
+    0% { color: rgba(255, 0, 0, 0.5);}
+    8.33% { color: rgba(199, 124, 11, 0.5);}
+    16.66% { color: rgba(180, 199, 11, 0.5);}
+    24.99% { color: rgba(127, 199, 11, 0.5);}
+    33.32% { color: rgba(11, 199, 36, 0.5);}
+    41.65% { color: rgba(0, 255, 200, 0.5);}
+    49.98% { color: rgba(11, 114, 199, 0.5);}
+    58.31% { color: rgba(11, 14, 199, 0.5);}
+    66.64% { color: rgba(83, 11, 199, 0.5);}
+    74.97% { color: rgba(161, 11, 199, 0.5);}
+    83.3% { color: rgba(255, 0, 157, 0.5);}
+    91.63% { color: rgba(255, 0, 64, 0.5);}
+    100% { color: rgba(199, 11, 11, 0.5);}
+  }
+
+.interestTitle {
+    animation: cycle 10s linear infinite;
+    animation-direction: alternate;
 }
