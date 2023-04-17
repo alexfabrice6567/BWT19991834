@@ -3,26 +3,33 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     background-color: rgb(214, 214, 214);
+    overflow-x: hidden;
 }
 
 .header {
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(170, 170, 170);
     z-index: 1;
 }
 
 .header a {
     text-decoration: none;
-    color: rgb(34, 34, 34)
+    color: rgb(34, 34, 34);
+}
+
+.header a:hover {
+    color: rgb(230, 230, 230);
+    transition: 0.3s;
 }
 
 .main-content {
-    background-color: #e7e7e7;
+    background-color: #6e6e6e;
 }
 
 .half-screen {
     height: 50% !important;
 }
 
+/* VIDEO START */
 .video-wrapper {
     display: block;
     margin: auto;
@@ -38,22 +45,162 @@ body {
 
 @keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
 }
 
 @keyframes fadeOut {
     from {
-      opacity: 1;
+        opacity: 1;
     }
+
     to {
-      opacity: 0;
+        opacity: 0;
+    }
+}
+/* VIDEO END */
+
+.interestTitle {
+    color: white;
+}
+
+/* FLIP CARD START */
+.card {
+    position: relative;
+    width: 95%;
+    height: 30rem;
+    margin: 1rem auto;
+    color: #ecf0f1;
+    border-radius: 0.8rem;
+    transform-style: preserve-3d;
+}
+
+.face {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8rem;
+    background-size: cover;
+    background-position: center center;
+    backface-visibility: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+.face--front {
+    background: #888888;
+}
+
+.face--back {
+    background: #888888;
+    transform: rotateY(180deg);
+}
+
+.card:hover .face--front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .face--back {
+    transform: rotateY(0deg);
+}
+/* FLIP CARD START */
+
+/* GAMER BUTTON CSS START */
+.gamer-btn{
+    position: relative;
+    width: 30rem;
+    height: 50px;
+    line-height: 48px;
+    background: #000;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    -webkit-box-reflect: below 1px -webkit-linear-gradient(transparent, #0004);
+}
+
+.gamer-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #fb0094, #00f, #0f0, 
+    #ff0, #f00, #fb0094, #00f, #0f0, #ff0, #f00);
+    background-size: 400%;
+    opacity: 0;
+    filter: blur(20px);
+    transition: 0.5s;
+}
+.gamer-btn::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #fb0094, #00f, #0f0, 
+    #ff0, #f00, #fb0094, #00f, #0f0, #ff0, #f00);
+    background-size: 400%;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.gamer-btn:hover::before,
+.gamer-btn:hover::after{
+    opacity: 1;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    100%{
+        background-position: 0 0;
     }
 }
 
+.gamer-btn span{
+    position: absolute;
+    display: block;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    text-align: center;
+    background: #0c0c0c;
+    color: rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.gamer-btn:hover span{
+    color: rgba(255, 255, 255, 1);
+}
+
+.gamer-btn span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+/* GAMER BUTTON CSS END */
+
+/* VIDEO COVER CSS START */
 .foreground-item {
     animation: fadeIn 0.5s;
     position: absolute;
@@ -61,36 +208,14 @@ body {
     left: 0;
     display: none;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(129, 129, 129, 0.8);
     z-index: 100;
 }
+/* VIDEO COVER CSS END */
 
-.foreground-item:hover  {
+/* .foreground-item:hover {
     animation: fadeOut 0.5s;
     opacity: 0;
-}
-
-@keyframes cycle {
-    0% { color: rgba(255, 0, 0, 0.5);}
-    8.33% { color: rgba(199, 124, 11, 0.5);}
-    16.66% { color: rgba(180, 199, 11, 0.5);}
-    24.99% { color: rgba(127, 199, 11, 0.5);}
-    33.32% { color: rgba(11, 199, 36, 0.5);}
-    41.65% { color: rgba(0, 255, 200, 0.5);}
-    49.98% { color: rgba(11, 114, 199, 0.5);}
-    58.31% { color: rgba(11, 14, 199, 0.5);}
-    66.64% { color: rgba(83, 11, 199, 0.5);}
-    74.97% { color: rgba(161, 11, 199, 0.5);}
-    83.3% { color: rgba(255, 0, 157, 0.5);}
-    91.63% { color: rgba(255, 0, 64, 0.5);}
-    100% { color: rgba(199, 11, 11, 0.5);}
-  }
-
-.interestTitle {
-    animation: cycle 10s linear infinite;
-    animation-direction: alternate;
-}
+} */
