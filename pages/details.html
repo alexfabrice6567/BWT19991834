@@ -5,6 +5,7 @@
     <title>19991834 Assignment 1</title>
     <link rel="stylesheet" href="../styles/fixedStars.css" />
     <link rel="stylesheet" href="../styles/details.css" />
+    <link rel="stylesheet" href="../styles/generalCss.css" />
     <script src="../javascript/details.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -72,9 +73,56 @@
     </div>
     <!-- HEADER END -->
 
-
     <div class="main-content">
         <div class="h-auto">
+            <div class="h-auto">
+                <div class="grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 text-center w-full lg:h-1/2">
+                    <section id="MyDetails">
+                        <!-- MY IMAGE START -->
+                        <div class="container">
+                            <div class="card drop-shadow-2xl">
+                                <div class="grid place-content-center face face--front pb-6">
+                                    <img src="../images/fabrice-noBg.png">
+                                </div>
+                                <div class="grid place-content-center face face--back">
+                                    <ul class="list-none text-auto md:text-2xl">
+                                        <li>Name: Fabrice Troubadour Alexandre</li>
+                                        <br>
+                                        <li>Date of Birth: 15 November 1999</li>
+                                        <br>
+                                        <li>Profession: Software Engineer</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MY IMAGE END -->
+                    </section>
+                    <section id="Knowledge">
+                        <!-- RIGHT ITEM START -->
+                        <div class="container">
+                            <div class="card drop-shadow-2xl">
+                                <div class="grid place-content-center md:text-3xl xs:text-2xl face face--front">
+                                    <h1 class="text-center py-4">Work Experience</h1>
+                                </div>
+                                <div class="grid place-content-center face face--back">
+                                    <ul class="list-none text-auto md:text-2xl">
+                                        <li>Internship - French Hub - Grand Baie - December 2018:<br>Software Developer
+                                            & Bug Fixing</li>
+                                        <br>
+                                        <li>Internship - SWAN - Port Louis - February 2021 - March 2021:<br>Manual
+                                            Testing & Bug Fixing</li>
+                                        <br>
+                                        <li>Software Engineer - ELCA - St Pierre - January 2022 - Present:<br>Full Stack
+                                            Software Engineer</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- RIGHT ITEM START -->
+                    </section>
+                </div>
+            </div>
+            <!-- MY IMAGE END -->
             <div class="h-auto">
                 <div class="grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 text-center w-full lg:h-1/2">
                     <section id="Education">
@@ -179,8 +227,8 @@
                         <source src="../videos/pc-higlights.mov">
                     </video>
                     <div class="foreground-item" id="foreground-item">
+                        <h1 class="text-3xl gamer-title text-center mt-12 text-white">Main Interest</h1>
                         <div class="grid place-content-center h-full">
-                            <!-- <h1 class="text-3xl gamer-title">Gamer since Forever</h1> -->
                             <a class="gamer-btn"><span>Gamer since Forever</span></a>
                         </div>
                     </div>

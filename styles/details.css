@@ -1,25 +1,3 @@
-html,
-body {
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow-x: hidden;
-}
-
-.header {
-    background-color: rgba(170, 170, 170, 0.5);
-    z-index: 1;
-}
-
-.header a {
-    text-decoration: none;
-    color: rgb(34, 34, 34);
-}
-
-.header a:hover {
-    color: rgb(230, 230, 230);
-    transition: 0.3s;
-}
-
 .half-screen {
     height: 50% !important;
 }
