@@ -2,38 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>My Todo List</title>
-    <meta name="author" content="PUT YOUR NAME HERE">
-    <meta name="description" content="Use ToDo list app to explore and interact with the DOM">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <title>RSS Reader</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="author" content="name">
+  <meta name="description" content="description here">
+  <meta name="keywords" content="keywords,here">
+
+  <link rel='stylesheet' href='css/style.css'>
 </head>
 
 <body>
-    <h1> My Todo List </h1>
-
+  <header>
+    <h2>RSS Reader</h2>
     <form>
-        <label for="txtTask">Task Name </label>
-        <input type="text" placeholder="Do Assignment" id="task-input">
-        <input type="button" value="Add Task" id="add-task">
+      <input type="text" id="rss-input" placeholder="URL of RSS Feed">
+      <button type="button" id="add-feed">
+        Get Articles
+      </button>
     </form>
-    <ul id="todo-list">
-    </ul>
-    <button type="button" id="show-all">All</button>
-    <button type="button" id="show-active">Active</button>
-    <button type="button" id="show-completed">Completed</button>
+  </header>
 
-    <script type="text/template" id="list-item-template">
-     <li class = "task">
-        <label> 
-            <input type = "checkbox" class = "checkbox">
-            <span class="task-name"><!-- TASK_NAME --></span>
-        </label>
-    </li>
-   </script>
+  <main></main>
 
+  <footer>
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License"
+         src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a><br>
+    This work is licensed under a <br>
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      Creative Commons<br>
+      Attribution 4.0 International License
+    </a>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src='js/script.js' defer></script>
 </body>
 
 </html>

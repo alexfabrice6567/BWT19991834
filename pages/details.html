@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/details.css" />
     <link rel="stylesheet" href="../styles/generalCss.css" />
     <script src="../javascript/details.js"></script>
+    <script src="../javascript/general.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -34,46 +35,111 @@
     </div>
     <!-- STARS BACKGROUND END -->
 
-    <!-- HEADER START -->
+    <!-- HEADER FOR LARGE SCREEN START -->
     <div
-        class="header sticky top-0 w-full items-center py-2 drop-shadow-xl header max-h-full box-content flex flex-wrap flex-col md:flex-row">
-        <div class="w-2/6">
-            <div class="grid grid-rows-4 md:grid-rows-none md:grid-cols-4">
-                <button class="my-1 mx-1 md:my-0 md:mx-4"><a href="../index.html">Home</a></button>
-                <button class="my-1 mx-1 md:my-0 md:mx-4"><a href="projects.html">Projects</a></button>
-                <button class="my-1 mx-1 md:my-0 md:mx-4"><a href="details.html">About</a></button>
-                <button class="my-1 mx-1 md:my-0 md:mx-4"><a href="contact.html">Contact</a></button>
+        class="header sticky top-0 w-full items-center py-2 drop-shadow-xl max-h-full box-content flex-wrap flex-row hidden md:flex">
+        <div class="w-1/3">
+            <div class="grid grid-rows-none grid-cols-4">
+                <button class="my-1 mx-1"><a href="../index.html">Home</a></button>
+                <button class="my-1 mx-1"><a href="projects.html">Projects</a></button>
+                <button class="my-1 mx-1"><a href="details.html">About</a></button>
+                <button class="my-1 mx-1"><a href="contact.html">Contact</a></button>
             </div>
         </div>
         <div class="w-1/2"></div>
         <div class="w-1/6">
-            <div class="grid grid-rows-4 md:grid-rows-none md:grid-cols-4">
-                <button class="my-1 mx-1 md:my-0 md:mx-4 w-4 h-4 lg:w-5 lg-h-5">
+            <div class="grid grid-rows-none grid-cols-4">
+                <button class="my-1 mx-1 w-4 h-4 md:w-5 lg-h-5">
                     <a href="https://www.tiktok.com/@at.fabrice" target="_blank">
-                        <img src="../images/socialmedia/tik-tok.png" />
+                        <img src="../images/socialmedia/tiktok.svg" />
                     </a>
                 </button>
-                <button class="my-1 mx-1 md:my-0 md:mx-4 w-4 h-4 lg:w-5 lg-h-5">
+                <button class="my-1 mx-1 w-4 h-4 md:w-5 lg-h-5">
                     <a href="https://instagram.com/is_alex.fab" target="_blank">
-                        <img src="../images/socialmedia/instagram.png"  />
+                        <img src="../images/socialmedia/instagram.svg" />
                     </a>
                 </button>
-                <button class="my-1 mx-1 md:my-0 md:mx-4 w-4 h-4 lg:w-5 lg-h-5">
+                <button class="my-1 mx-1 w-4 h-4 md:w-5 lg-h-5">
                     <a href="https://www.facebook.com/fabrice.AT" target="_blank">
-                        <img src="../images/socialmedia/facebook.png"  />
+                        <img src="../images/socialmedia/facebook.svg" />
                     </a>
                 </button>
-                <button class="my-1 mx-1 md:my-0 md:mx-4 w-4 h-4 lg:w-5 lg-h-5">
+                <button class="my-1 mx-1 w-4 h-4 md:w-5 lg-h-5">
                     <a href="https://wa.me/message/63HLCU64H47CK1" target="_blank">
-                        <img src="../images/socialmedia/whatsapp.png"  />
+                        <img src="../images/socialmedia/whatsapp.svg" />
                     </a>
                 </button>
             </div>
         </div>
     </div>
-    <!-- HEADER END -->
+    <!-- HEADER FOR LARGE SCREEN END -->
 
-    <div class="main-content">
+    <!-- HEADER FOR SMALL SCREEN START -->
+    <div class="header sticky top-0 w-full items-end max-h-full box-content flex flex-wrap flex-row md:hidden"
+        onclick="showMenu()">
+        <div class="flex m-1 items-end">
+            <button class="relative group">
+                <div
+                    class="relative flex items-center justify-center w-[30px] h-[30px] transform transition-all duration-200">
+                    <div
+                        class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 group-focus:-rotate-[45deg] origin-center">
+                        <div
+                            class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-right delay-75 group-focus:-translate-y-[1px]">
+                        </div>
+                        <div class="bg-white h-[1px] rounded"></div>
+                        <div
+                            class="bg-white h-[2px] w-1/2 rounded self-end transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-left delay-75 group-focus:translate-y-[1px]">
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div id="hidden-header"
+        class="hidden-header sticky w-full items-center max-h-full box-content flex flex-wrap flex-row md:hidden transition-all duration-200">
+        <div class="h-max w-full flex flex-row">
+            <div class="w-1/4">
+                <div class="grid grid-rows-2 grid-cols-2">
+                    <button class="my-1 mx-1"><a href="../index.html">Home</a></button>
+                    <button class="my-1 mx-1"><a href="projects.html">Projects</a></button>
+                    <button class="my-1 mx-1"><a href="details.html">About</a></button>
+                    <button class="my-1 mx-1"><a href="contact.html">Contact</a></button>
+                </div>
+            </div>
+            <div class="w-9/12"></div>
+            <div class="w-1/6">
+                <div class="grid grid-rows-2">
+                    <div class="grid grid-cols-2 my-1">
+                        <button class="my-1 mr-2 w-5 h-5">
+                            <a href="https://www.tiktok.com/@at.fabrice" target="_blank">
+                                <img src="../images/socialmedia/tiktok.svg" />
+                            </a>
+                        </button>
+                        <button class="my-1 mr-2 w-5 h-5">
+                            <a href="https://instagram.com/is_alex.fab" target="_blank">
+                                <img src="../images/socialmedia/instagram.svg" />
+                            </a>
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-2 my-1">
+                        <button class="my-1 mr-2 w-5 h-5">
+                            <a href="https://www.facebook.com/fabrice.AT" target="_blank">
+                                <img src="../images/socialmedia/facebook.svg" />
+                            </a>
+                        </button>
+                        <button class="my-1 mr-2 w-5 h-5">
+                            <a href="https://wa.me/message/63HLCU64H47CK1" target="_blank">
+                                <img src="../images/socialmedia/whatsapp.svg" />
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER FOR SMALL SCREEN END -->
+
+    <div class="main-content" onclick="hideMenu()">
         <div class="h-auto">
             <div class="h-auto">
                 <div class="grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 text-center w-full lg:h-1/2">

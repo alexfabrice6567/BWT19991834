@@ -15,7 +15,14 @@ body {
     color: rgb(34, 34, 34);
 }
 
+.hidden-header a:hover,
 .header a:hover {
     color: rgb(230, 230, 230);
     transition: 0.3s;
+}
+
+#hidden-header {
+    display: none;
+    background-color: rgba(160, 160, 160, 0.5);
+    transition:5s ease-in-out;
 }
